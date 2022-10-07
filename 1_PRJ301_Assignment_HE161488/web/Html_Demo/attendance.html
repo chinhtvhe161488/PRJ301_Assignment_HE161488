@@ -1,213 +1,125 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
--->
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Time Table</title>
+    <title>Attendance</title>
     <style>
+        td {
+            border: none;
+            justify-self: flex-start;
+            vertical-align: top;
+        }
         a:link {
             text-decoration: none;
         }
-        td {
-            border: none;
+        .avatar img{
+            display: flex;
+            align-items: center;
+            justify-content: space-between ;
+        }
+        .absent{
+            color: red;
+        }
+        .present{
+            color: green;
         }
     </style>
 </head>
 <body>
-    <h1>FPT University Academic Portal</h1>
-    <ol>
-        <li>
-            <span>
-                <a href="#">Home</a>
-                <b>View Schedule</b>
-            </span>
-        </li>
-    </ol>
-    <h3>Activities for SE001()</h3>
+    <h1>Single Activity Attendance</h1>
+    <p>Attendance for <b>PRF192</b> with lecturer <b>SonNT5</b> at slot 1 on Wednesday 19/01/2022, Spring 2022, in room BE-301 at FU-HL</p>
+    <br>
     <form action="">
-        <table border="0px" style="width: 100%;"> 
-            <tr style="background-color: #6b90da">
-                <th style="text-align: justify;">YEAR <select name="year">
-                    <option value="2019">2019</option>
-                    <option value="2020">2020</option>
-                    <option value="2021">2021</option>
-                    <option value="2022">2022</option>
-                </select><br>WEEK</th>
-                <th>MON</th>
-                <th>TUE</th>
-                <th>WEB</th>
-                <th>THU</th>
-                <th>FRI</th>
-                <th>SAT</th>
-                <th>SUN</th>
+        <table border="0px" style="width: 100%;">
+            <tr style="background-color: #6b90da;">
+                <th>NO</th>
+                <th>GROUP</th>
+                <th>CODE</th>
+                <th>NAME</th>
+                <th style="width: 222px;">IMAGE</th>
+                <th>STATUS</th>
+                <th>COMMENT</th>
+                <th>TAKER</th>
+                <th>RECORD TIME</th>
             </tr>
             <tr>
-                <td>Slot 1</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>
-                    <p>
-                        <a href="#">SWE201c</a>
-                        <a style="background-color: #f0ab49; color: #ffffff;" href="#">View Materials</a> <br> at BE-302
-                        <a>
-                        <br>(<font class="green">attended</font>)
-                        </a>
-                        <h3><a style="color: #23527c;">Online</a></h3>
-                    </p>
-                    
-                </td>
-                <td>-</td>  
+                <td>1</td>
+                <td><a href="#">IOT1702</a></td>
+                <td>HE130430</td>
+                <td><a href="#">Đỗ Mạnh Hưng</a></td>
+                <td><img class="avatar" src="https://actvn.edu.vn/Gioithieu/GetImage/290" alt="Not found"></td>
+                <td class="absent">Absent</td>
+                <td></td>
+                <td><a href="#">sonnt5</a></td>
+                <td>1/19/2022 8:54:00 AM</td>
             </tr>
             <tr>
-                <td>Slot 2</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
+                <td>2</td>
+                <td><a href="#">IOT1702</a></td>
+                <td>HE141602</td>
+                <td><a href="#">Nguyễn Việt Hoàng</a></td>
+                <td><img class="avatar" src="https://actvn.edu.vn/Gioithieu/GetImage/290" alt="Not found"></td>
+                <td class="present">Present</td>
+                <td></td>
+                <td><a href="#">sonnt5</a></td>
+                <td>1/19/2022 8:54:00 AM</td>
             </tr>
             <tr>
-                <td>Slot 3</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
+                <td>3</td>
+                <td><a href="#">IOT1702</a></td>
+                <td>HE150671</td>
+                <td><a href="#">Hoàng Văn Tân</a></td>
+                <td><img class="avatar" src="https://actvn.edu.vn/Gioithieu/GetImage/290" alt="Not found"></td>
+                <td class="present">Present</td>
+                <td></td>
+                <td><a href="#">sonnt5</a></td>
+                <td>1/19/2022 8:54:00 AM</td>
             </tr>
             <tr>
-                <td>Slot 4</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
+                <td>4</td>
+                <td><a href="#">IOT1702</a></td>
+                <td>HE180258</td>
+                <td><a href="3">Phan Kiến Quốc</a></td>
+                <td><img class="avatar" src="https://actvn.edu.vn/Gioithieu/GetImage/290" alt="Not found"></td>
+                <td class="present">Present</td>
+                <td></td>
+                <td><a href="#">sonnt5</a></td>
+                <td>1/19/2022 8:54:00 AM</td>
             </tr>
             <tr>
-                <td>Slot 5</td>
-                <td>
-                    <p>
-                        <a class="course" href="#">PRJ301</a>
-                        <a style="background-color: #f0ab49; color: #ffffff;" href="#">View Materials</a> <br> at DE-C203
-                        <a>
-                            <br>(<font class="green">attended</font>)
-                        </a>
-                    </p>
-                </td>
-                <td>-</td>
-                <td>
-                    <p>
-                        <a href="#">PRJ301</a>
-                        <a style="background-color: #f0ab49; color: #ffffff;" href="#">View Materials</a> <br> at DE-C203
-                        <a>
-                            <br>(<font class="green">attended</font>)
-                        </a>
-                    </p>
-                </td>
-                <td>
-                    <p>
-                        <a href="#">JPD123</a> 
-                        <a style="background-color: #f0ab49; color: #ffffff;" href="#">View Materials</a> <br> at DE-C301
-                        <a>
-                            <br>(<font class="green">attended</font>)
-                        </a>
-                    </p>
-                </td>
-                <td>
-                    <p>
-                        <a href="#">PRJ301</a>
-                        <a style="background-color: #f0ab49; color: #ffffff;" href="#">View Materials</a> <br> at DE-C203
-                        <a>
-                            <br>(<font class="green">attended</font>)
-                        </a>
-                    </p>
-                </td>
-                <td>-</td>
-                <td>-</td>
+                <td>5</td>
+                <td><a href="#">IOT1702</a></td>
+                <td>HE180498</td>
+                <td><a href="#"></a>Vũ Minh Quang</td>
+                <td><img class="avatar" src="https://actvn.edu.vn/Gioithieu/GetImage/290" alt="Not found"></td>
+                <td class="present">Present</td>
+                <td></td>
+                <td><a href="#">sonnt5</a></td>
+                <td>1/19/2022 8:54:00 AM</td>
             </tr>
             <tr>
-                <td>Slot 6</td>
-                <td>
-                    <p>
-                        <a href="#">MAS291</a> 
-                        <a style="background-color: #f0ab49; color: #ffffff;" href="#">View Materials</a> <br> at DE-C203
-                        <a>
-                            <br>(<font class="green">attended</font>)
-                        </a>
-                    </p>
-                </td>
-                <td>
-                    <p>
-                        <a href="#">JPD123</a>
-                        <a style="background-color: #f0ab49; color: #ffffff;" href="#">View Materials</a> <br> at DE-C301
-                        <a>
-                            <br>(<font class="green">attended</font>)
-                        </a>
-                    </p>
-                </td>
-                <td>
-                    <p>
-                        <a href="#">MAS291</a> 
-                        <a style="background-color: #f0ab49; color: #ffffff;" href="#">View Materials</a> <br> at DE-C203
-                        <a>
-                            <br>(<font class="green">attended</font>)
-                        </a>
-                    </p>
-                </td>
-                <td>
-                    <p>
-                        <a href="#">JPD123</a>
-                        <a style="background-color: #f0ab49; color: #ffffff;" href="#">View Materials</a> <br> at DE-C301
-                        <a>
-                            <br>(<font class="green">attended</font>)
-                        </a>
-                    </p>
-                </td>
-                <td>
-                    <p>
-                        <a href="#">MAS291</a> 
-                        <a style="background-color: #f0ab49; color: #ffffff;" href="#">View Materials</a> <br> at DE-C203
-                        <a>
-                            <br>(<font class="green">attended</font>)
-                        </a>
-                    </p>
-                </td>
-                <td>-</td>
-                <td>-</td>
+                <td>6</td>
+                <td><a href="#">IOT1702</a></td>
+                <td>HE180633</td>
+                <td><a href="#">Ngô Dương Ngọc</a></td>
+                <td><img class="avatar" src="https://actvn.edu.vn/Gioithieu/GetImage/290" alt="Not found"></td>
+                <td class="absent">Absent</td>
+                <td></td>
+                <td><a href="#">sonnt5</a></td>
+                <td>1/19/2022 8:54:00 AM</td>
             </tr>
             <tr>
-                <td>Slot 7</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td>Slot 8</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
+                <td>7</td>
+                <td><a href="#">IOT1702</a></td>
+                <td>HE180888</td>
+                <td><a href="#"></a>Trần Quý Đạt</td>
+                <td><img class="avatar" src="https://actvn.edu.vn/Gioithieu/GetImage/290" alt="Not found"></td>
+                <td class="present-status">Present</td>
+                <td></td>
+                <td><a href="#">sonnt5</a></td>
+                <td>1/19/2022 8:54:00 AM</td>
             </tr>
         </table>
     </form>
