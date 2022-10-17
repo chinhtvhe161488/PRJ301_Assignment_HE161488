@@ -22,7 +22,7 @@
             <input type="submit" value="View"/> 
         </form>
         <table border="1px">
-            <tr>
+            <tr style="background-color: #6b90da;">
                 <td> </td>
                 <c:forEach items="${requestScope.dates}" var="d">
                     <td>${d}<br/>${helper.getDayNameofWeek(d)}</td>
