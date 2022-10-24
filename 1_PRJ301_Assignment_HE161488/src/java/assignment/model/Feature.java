@@ -10,11 +10,21 @@ import java.util.ArrayList;
  *
  * @author Admin
  */
-public class Student {
+public class Feature {
     private int id;
     private String name;
-    private ArrayList<Group> groups = new ArrayList<>();
-    private ArrayList<Attandance> attandances = new ArrayList<>();
+    private String url;
+    
+    private ArrayList<Role> roles = new ArrayList<>();
+
+    public ArrayList<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(ArrayList<Role> roles) {
+        this.roles = roles;
+    }
+    
 
     public int getId() {
         return id;
@@ -32,20 +42,12 @@ public class Student {
         this.name = name;
     }
 
-    public ArrayList<Group> getGroups() {
-        return groups;
+    public String getUrl() {
+        return url;
     }
 
-    public void setGroups(ArrayList<Group> groups) {
-        this.groups = groups;
-    }
-
-    public ArrayList<Attandance> getAttandances() {
-        return attandances;
-    }
-
-    public void setAttandances(ArrayList<Attandance> attandances) {
-        this.attandances = attandances;
+    public void setUrl(String url) {
+        this.url = url;
     }
     
 }

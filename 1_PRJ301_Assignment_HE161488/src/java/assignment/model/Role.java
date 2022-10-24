@@ -5,16 +5,17 @@
 package assignment.model;
 
 import java.util.ArrayList;
+import assignment.model.Account;
 
 /**
  *
  * @author Admin
  */
-public class Student {
+public class Role {
     private int id;
     private String name;
-    private ArrayList<Group> groups = new ArrayList<>();
-    private ArrayList<Attandance> attandances = new ArrayList<>();
+    private ArrayList<Feature> features = new ArrayList<>();
+    private ArrayList<Account> accounts = new ArrayList<>();
 
     public int getId() {
         return id;
@@ -32,20 +33,20 @@ public class Student {
         this.name = name;
     }
 
-    public ArrayList<Group> getGroups() {
-        return groups;
+    public ArrayList<Feature> getFeatures() {
+        return features;
     }
 
-    public void setGroups(ArrayList<Group> groups) {
-        this.groups = groups;
+    public void setFeatures(ArrayList<Feature> features) {
+        this.features = features;
     }
 
-    public ArrayList<Attandance> getAttandances() {
-        return attandances;
+    public ArrayList<Account> getAccounts() {
+        return accounts;
     }
 
-    public void setAttandances(ArrayList<Attandance> attandances) {
-        this.attandances = attandances;
+    public void setAccounts(ArrayList<Account> accounts) {
+        this.accounts = accounts;
     }
     
 }

@@ -2,25 +2,28 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package model;
+package assignment.model;
+
+import java.util.ArrayList;
 
 /**
  *
- * @author Admin
+ * @author sonnt
  */
 public class Account {
     private String username;
     private String password;
     private String displayname;
+    private ArrayList<Role> roles = new ArrayList<>();
 
-    public Account() {
+    public ArrayList<Role> getRoles() {
+        return roles;
     }
 
-    public Account(String username, String password, String displayname) {
-        this.username = username;
-        this.password = password;
-        this.displayname = displayname;
+    public void setRoles(ArrayList<Role> roles) {
+        this.roles = roles;
     }
+    
 
     public String getUsername() {
         return username;

@@ -6,21 +6,20 @@ package assignment.model;
 
 /**
  *
- * @author Admin
+ * @author sonnt
  */
-public class Attendance {
-    private int id;
-    private Session session;
+public class Attandance {
     private Student student;
+    private Session session;
     private boolean present;
     private String description;
 
-    public int getId() {
-        return id;
+    public Student getStudent() {
+        return student;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setStudent(Student student) {
+        this.student = student;
     }
 
     public Session getSession() {
@@ -29,14 +28,6 @@ public class Attendance {
 
     public void setSession(Session session) {
         this.session = session;
-    }
-
-    public Student getStudent() {
-        return student;
-    }
-
-    public void setStudent(Student student) {
-        this.student = student;
     }
 
     public boolean isPresent() {

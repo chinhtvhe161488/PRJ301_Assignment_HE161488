@@ -9,7 +9,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import model.Account;
+import assignment.model.Account;
 
 /**
  *
@@ -20,16 +20,13 @@ public abstract class BaseAuthenticationController extends HttpServlet {
     private boolean isAuthenticated(HttpServletRequest req) {
         return req.getSession().getAttribute("account") != null;
     }
-
-    protected abstract void doPost(HttpServletRequest req, HttpServletResponse resp, Account account) throws ServletException, IOException;
-
-    protected abstract void doGet(HttpServletRequest req, HttpServletResponse resp, Account account) throws ServletException, IOException;
-
+    
+    protected abstract void processPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException;
+    protected abstract void processGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException;
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         if (isAuthenticated(req)) {
-            Account account = (Account) req.getSession().getAttribute("account");
-            doPost(req, resp, account);
+            processPost(req, resp);
         } else {
             resp.getWriter().println("access denied!");
         }
@@ -38,8 +35,7 @@ public abstract class BaseAuthenticationController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         if (isAuthenticated(req)) {
-            Account account = (Account) req.getSession().getAttribute("account");
-            doGet(req, resp, account);
+            processGet(req, resp);
         } else {
             resp.getWriter().println("access denied!");
         }
