@@ -38,7 +38,7 @@
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>TakeAttendance</servlet-name>
-        <url-pattern>/takeattendance</url-pattern>
+        <url-pattern>/lecturer/att</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -21,7 +21,7 @@
             Date: ${requestScope.ses.date} - ${requestScope.ses.slot.description}<br/>
             Attended: <span style="color: red;"> ${requestScope.ses.attanded?"Yes":"No"} </span>
         </div>
-        <form action="takeatt" method="POST">
+        <form action="att" method="POST">
             <input type="hidden" name="sesid" value="${param.id}"/>
             <table border="1px">
                 <tr style="background-color: #6b90da;">
