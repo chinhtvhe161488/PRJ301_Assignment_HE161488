@@ -17,8 +17,8 @@
         <servlet-class>controller.auth.LogoutController</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>TakeAttendance</servlet-name>
-        <servlet-class>assignment.lecturer.TakeAttendance</servlet-class>
+        <servlet-name>TakeAttController</servlet-name>
+        <servlet-class>assignment.lecturer.TakeAttController</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>LecturerTimetableController</servlet-name>
@@ -37,8 +37,8 @@
         <url-pattern>/logout</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>TakeAttendance</servlet-name>
-        <url-pattern>/lecturer/att</url-pattern>
+        <servlet-name>TakeAttController</servlet-name>
+        <url-pattern>/lecturer/takeatt</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
