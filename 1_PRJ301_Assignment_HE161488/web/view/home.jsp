@@ -43,7 +43,7 @@
         }
     </style>
     <body>
-        <h1 style="padding-left: 100px;">FPT University Academic Portal</h1>
+        <h1 style="text-align: center;">FPT University Academic Portal</h1>
         <hr>
         <c:if test="${sessionScope.account ne null}">
             <div><a href="http://localhost:9999/1_PRJ301_Assignment_HE161488/lecturer/timetable?lid=1">Time Table</a></div>
@@ -52,12 +52,14 @@
                 <a href="logout">here</a> to logout. </span>
             </div>
         </c:if>
+            <div>
+                
+            </div>
         <c:if test="${sessionScope.account eq null}">
             <div class="left-header">
                 <span class="lhd"> <b>PLEASE LOGIN BY FPT ACCOUNT</b></span> <br>
                 <div class="login"><button><a href="login"> Login</a></button></div>
             </div>
-        </div>
         <!--            click 
                     <a href="login">here</a> to login. -->
     </c:if>

@@ -17,7 +17,7 @@ import assignment.model.Student;
 
 /**
  *
- * @author sonnt
+ * @author Admin
  */
 public class TakeAttendance extends HttpServlet {
 

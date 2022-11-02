@@ -11,7 +11,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Time Table</title>
     </head>
     <body>
         Lecturer: <input type="text" readonly="readonly" value="${requestScope.lecturer.name}"/>
