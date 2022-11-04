@@ -13,6 +13,13 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Time Table</title>
     </head>
+    <style>
+        .back{
+           padding-top: 10px;
+           text-align: center; 
+           align-items: center;
+        }
+    </style>
     <body>
         Lecturer: <input type="text" readonly="readonly" value="${requestScope.lecturer.name}"/>
         <form action="timetable" method="GET">
@@ -52,5 +59,6 @@
                 </tr>
             </c:forEach>
         </table>
+            <div class="back"><button><a href="../home">Home</a></button></div>
     </body>
 </html>

@@ -10,7 +10,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>FAP</title>
     </head>
     <style>
         .left-header{
@@ -36,6 +36,13 @@
             color: #ffffff;
             display: inline;
             text-align: center;
+            margin: 200px;
+            font-size: 25px;
+        }
+        .timetab{
+            border: 1px #333333 solid;
+            margin: 200px;
+            font-size: 25px;
         }
         .footer{
             padding-top: 50px;
@@ -46,24 +53,29 @@
         <h1 style="text-align: center;">FPT University Academic Portal</h1>
         <hr>
         <c:if test="${sessionScope.account ne null}">
-            <div><a href="http://localhost:9999/1_PRJ301_Assignment_HE161488/lecturer/timetable?lid=1">Time Table</a></div>
+            <span class="timetab"><a href="http://localhost:9999/1_PRJ301_Assignment_HE161488/lecturer/timetable?lid=1">Time Table</a></span><br>
             <div class="greet">
                 <span> Hello ${sessionScope.account.displayname}, click 
-                <a href="logout">here</a> to logout. </span>
+                    <a id="myBtn" href="logout">here</a> to logout. </span>
             </div>
         </c:if>
-            <div>
-                
-            </div>
+        <div>
+
+        </div>
         <c:if test="${sessionScope.account eq null}">
             <div class="left-header">
                 <span class="lhd"> <b>PLEASE LOGIN BY FPT ACCOUNT</b></span> <br>
                 <div class="login"><button><a href="login"> Login</a></button></div>
             </div>
-        <!--            click 
-                    <a href="login">here</a> to login. -->
-    </c:if>
-    <p class="footer">© Powered by <a href="https://fpt.edu.vn/">FPT University</a> | <a href="https://cmshn.fpt.edu.vn/">CMS</a> | <a href="http://libol.fpt.edu.vn/">library</a> | <a href="https://library.books24x7.com/login.asp?ic=0">books24x7</a></p>
-</div>
+            <!--            click 
+                        <a href="login">here</a> to login. -->
+        </c:if>
+        <p class="footer">© Powered by <a href="https://fpt.edu.vn/">FPT University</a> | <a href="https://cmshn.fpt.edu.vn/">CMS</a> | <a href="http://libol.fpt.edu.vn/">library</a> | <a href="https://library.books24x7.com/login.asp?ic=0">books24x7</a></p>
+    </div>
+    <script>
+        document.getElementById("myBtn").addEventListener("click", function () {
+            alert("Are you sure you want log out?");
+        });
+    </script>
 </body>
 </html>
