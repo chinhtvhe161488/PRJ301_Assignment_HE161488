@@ -12,6 +12,11 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Take Attendance</title>
     </head>
+    <style>
+        .title{
+            background-color: #6b90da;
+        }
+    </style>
     <body>
         ${requestScope.ses.id}, class: ${requestScope.ses.group.name} 
         <br/>
@@ -22,7 +27,7 @@
         <form action="takeatt" method="POST">
             <input type="hidden" name="sesid" value="${param.id}"/>
             <table border="1px">
-                <tr>
+                <tr class="title">
                     <td>Student Id</td>
                     <td>Student Name</td>
                     <td>Present</td>
@@ -50,6 +55,8 @@
                 </c:forEach>
             </table>
             <input type="submit" value="Save"/>
+            <!--<span class="back"><button><a href="../lecturer/timetable"+}>Back</a></button></span>-->
+            <span class="home"><button><a href="../home">Home</a></button></span>
         </form>
     </body>
 </html>

@@ -14,7 +14,7 @@
         <title>Time Table</title>
     </head>
     <style>
-        .back{
+        .home{
            padding-top: 10px;
            text-align: center; 
            align-items: center;
@@ -59,6 +59,6 @@
                 </tr>
             </c:forEach>
         </table>
-            <div class="back"><button><a href="../home">Home</a></button></div>
+            <div class="home"><button><a href="../home">Home</a></button></div>
     </body>
 </html>

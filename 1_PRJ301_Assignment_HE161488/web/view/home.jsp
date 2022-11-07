@@ -35,7 +35,7 @@
             background-color: #5cb85c;
             color: #ffffff;
             display: inline;
-            text-align: center;
+            /*text-align: center;*/
             margin: 200px;
             font-size: 25px;
         }
