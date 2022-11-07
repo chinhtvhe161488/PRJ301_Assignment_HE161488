@@ -12,6 +12,7 @@ import java.util.ArrayList;
  * @author Admin
  */
 public class Session {
+
     private int id;
     private Lecturer lecturer;
     private Room room;
@@ -19,7 +20,7 @@ public class Session {
     private Date date;
     private Group group;
     private int index;
-    private boolean attandated; 
+    private boolean attandated;
     private ArrayList<Attandance> attandances = new ArrayList<>();
 
     public int getId() {
@@ -93,5 +94,5 @@ public class Session {
     public void setAttandances(ArrayList<Attandance> attandances) {
         this.attandances = attandances;
     }
-    
+
 }

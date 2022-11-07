@@ -36,8 +36,7 @@ public class AttandanceDBContext extends DBContext<Attandance> {
             PreparedStatement stm = connection.prepareStatement(sql);
             stm.setInt(1, sesid);
             ResultSet rs = stm.executeQuery();
-            while(rs.next())
-            {
+            while (rs.next()) {
                 Attandance att = new Attandance();
                 Student s = new Student();
                 att.setStudent(s);

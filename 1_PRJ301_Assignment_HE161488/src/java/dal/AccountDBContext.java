@@ -26,8 +26,7 @@ public class AccountDBContext extends DBContext<Account> {
             stm.setString(1, username);
             stm.setString(2, password);
             ResultSet rs = stm.executeQuery();
-            if(rs.next())
-            {
+            if (rs.next()) {
                 Account account = new Account();
                 account.setUsername(username);
                 account.setDisplayname(rs.getString("displayname"));

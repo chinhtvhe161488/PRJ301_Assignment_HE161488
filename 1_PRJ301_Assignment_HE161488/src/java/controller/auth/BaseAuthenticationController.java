@@ -9,7 +9,6 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import assignment.model.Account;
 
 /**
  *
@@ -20,9 +19,11 @@ public abstract class BaseAuthenticationController extends HttpServlet {
     private boolean isAuthenticated(HttpServletRequest req) {
         return req.getSession().getAttribute("account") != null;
     }
-    
+
     protected abstract void processPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException;
+
     protected abstract void processGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException;
+
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         if (isAuthenticated(req)) {

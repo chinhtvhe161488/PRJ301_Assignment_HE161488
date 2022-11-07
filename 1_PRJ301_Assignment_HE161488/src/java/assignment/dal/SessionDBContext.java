@@ -23,7 +23,7 @@ import java.sql.Date;
 
 /**
  *
- * @author sonnt
+ * @author Admin
  */
 public class SessionDBContext extends DBContext<Session> {
 

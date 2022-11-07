@@ -11,6 +11,7 @@ import java.util.ArrayList;
  * @author Admin
  */
 public class Group {
+
     private int id;
     private String name;
     private ArrayList<Student> students = new ArrayList<>();
@@ -56,5 +57,5 @@ public class Group {
     public void setSupervisor(Lecturer supervisor) {
         this.supervisor = supervisor;
     }
-    
+
 }

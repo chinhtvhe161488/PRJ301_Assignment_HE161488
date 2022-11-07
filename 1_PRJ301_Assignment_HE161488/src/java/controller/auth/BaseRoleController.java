@@ -18,41 +18,39 @@ import assignment.model.Role;
  */
 public abstract class BaseRoleController extends BaseAuthenticationController {
 
-    private boolean checkAuthorization(HttpServletRequest req)
-    {
+    private boolean checkAuthorization(HttpServletRequest req) {
         String currentURL = req.getServletPath();
         Account account = (Account) req.getSession().getAttribute("account");
         for (Role role : account.getRoles()) {
             for (Feature feature : role.getFeatures()) {
-                if(feature.getUrl().equals(currentURL))
+                if (feature.getUrl().equals(currentURL)) {
                     return true;
+                }
             }
         }
         return false;
     }
-    
+
     protected abstract void processAuthPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException;
+
     protected abstract void processAuthGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException;
-    
-    
+
     @Override
     protected void processPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        if(checkAuthorization(req))
-        {
+        if (checkAuthorization(req)) {
             processAuthPost(req, resp);
-        }
-        else
+        } else {
             resp.getWriter().println("access denied!");
+        }
     }
 
     @Override
     protected void processGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        if(checkAuthorization(req))
-        {
+        if (checkAuthorization(req)) {
             processAuthGet(req, resp);
-        }
-        else
+        } else {
             resp.getWriter().println("access denied!");
+        }
     }
-    
+
 }

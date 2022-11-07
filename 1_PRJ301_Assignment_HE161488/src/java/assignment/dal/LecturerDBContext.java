@@ -40,8 +40,7 @@ public class LecturerDBContext extends dal.DBContext<Lecturer> {
             PreparedStatement stm = connection.prepareStatement(sql);
             stm.setInt(1, id);
             ResultSet rs = stm.executeQuery();
-            if(rs.next())
-            {
+            if (rs.next()) {
                 Lecturer l = new Lecturer();
                 l.setId(rs.getInt("lid"));
                 l.setName(rs.getString("lname"));
@@ -57,5 +56,5 @@ public class LecturerDBContext extends dal.DBContext<Lecturer> {
     public ArrayList<Lecturer> list() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
-    
+
 }

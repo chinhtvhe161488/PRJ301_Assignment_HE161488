@@ -11,10 +11,11 @@ import java.util.ArrayList;
  * @author Admin
  */
 public class Feature {
+
     private int id;
     private String name;
     private String url;
-    
+
     private ArrayList<Role> roles = new ArrayList<>();
 
     public ArrayList<Role> getRoles() {
@@ -24,7 +25,6 @@ public class Feature {
     public void setRoles(ArrayList<Role> roles) {
         this.roles = roles;
     }
-    
 
     public int getId() {
         return id;
@@ -49,5 +49,5 @@ public class Feature {
     public void setUrl(String url) {
         this.url = url;
     }
-    
+
 }

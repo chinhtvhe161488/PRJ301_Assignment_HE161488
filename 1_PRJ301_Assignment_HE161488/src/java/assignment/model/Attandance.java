@@ -6,9 +6,10 @@ package assignment.model;
 
 /**
  *
- * @author sonnt
+ * @author Admin
  */
 public class Attandance {
+
     private Student student;
     private Session session;
     private boolean present;
@@ -45,5 +46,5 @@ public class Attandance {
     public void setDescription(String description) {
         this.description = description;
     }
-    
+
 }

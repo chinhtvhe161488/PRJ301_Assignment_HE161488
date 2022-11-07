@@ -7,6 +7,7 @@ package assignment.model;
 import java.util.ArrayList;
 
 public class Account {
+
     private String username;
     private String password;
     private String displayname;
@@ -19,7 +20,6 @@ public class Account {
     public void setRoles(ArrayList<Role> roles) {
         this.roles = roles;
     }
-    
 
     public String getUsername() {
         return username;
@@ -44,5 +44,5 @@ public class Account {
     public void setDisplayname(String displayname) {
         this.displayname = displayname;
     }
-    
+
 }

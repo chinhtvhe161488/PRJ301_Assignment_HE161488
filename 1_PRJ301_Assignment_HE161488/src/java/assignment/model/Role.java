@@ -5,13 +5,13 @@
 package assignment.model;
 
 import java.util.ArrayList;
-import assignment.model.Account;
 
 /**
  *
  * @author Admin
  */
 public class Role {
+
     private int id;
     private String name;
     private ArrayList<Feature> features = new ArrayList<>();
@@ -48,5 +48,5 @@ public class Role {
     public void setAccounts(ArrayList<Account> accounts) {
         this.accounts = accounts;
     }
-    
+
 }

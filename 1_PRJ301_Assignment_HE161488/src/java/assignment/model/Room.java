@@ -11,6 +11,7 @@ import java.util.ArrayList;
  * @author Admin
  */
 public class Room {
+
     private int id;
     private String name;
     private ArrayList<Session> sessions = new ArrayList<>();
@@ -38,5 +39,5 @@ public class Room {
     public void setSessions(ArrayList<Session> sessions) {
         this.sessions = sessions;
     }
-    
+
 }

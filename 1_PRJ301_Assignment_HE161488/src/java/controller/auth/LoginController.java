@@ -55,7 +55,7 @@ public class LoginController extends HttpServlet {
             response.sendRedirect("/1_PRJ301_Assignment_HE161488/home");
 //            request.getRequestDispatcher("view/home.jsp").forward(request, response);
         }
-        
+
     }
 
     /**

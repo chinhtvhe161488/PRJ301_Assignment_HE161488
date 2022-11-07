@@ -65,13 +65,13 @@ public class TakeAttController extends HttpServlet {
             a.setStudent(s);
             a.setSession(ses);
             s.setId(Integer.parseInt(stdid));
-            a.setPresent(request.getParameter("present"+stdid).equals("present"));
-            a.setDescription(request.getParameter("description"+stdid));
+            a.setPresent(request.getParameter("present" + stdid).equals("present"));
+            a.setDescription(request.getParameter("description" + stdid));
             ses.getAttandances().add(a);
         }
         SessionDBContext db = new SessionDBContext();
         db.update(ses);
-        response.sendRedirect("/1_PRJ301_Assignment_HE161488/lecturer/takeatt?id="+ses.getId());
+        response.sendRedirect("/1_PRJ301_Assignment_HE161488/lecturer/takeatt?id=" + ses.getId());
     }
 
     /**
