@@ -6,10 +6,6 @@ package assignment.model;
 
 import java.util.ArrayList;
 
-/**
- *
- * @author sonnt
- */
 public class Account {
     private String username;
     private String password;

@@ -71,7 +71,7 @@ public class TakeAttController extends HttpServlet {
         }
         SessionDBContext db = new SessionDBContext();
         db.update(ses);
-        response.sendRedirect("/lecturer/takeatt?id="+ses.getId());
+        response.sendRedirect("/1_PRJ301_Assignment_HE161488/lecturer/takeatt?id="+ses.getId());
     }
 
     /**
