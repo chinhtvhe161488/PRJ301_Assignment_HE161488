@@ -13,20 +13,30 @@
         <title>Take Attendance</title>
     </head>
     <style>
+        .header{
+            margin: 20px 0 20px;
+        }
         .title{
             background-color: #6b90da;
+            color: #ffffff;
+        }
+        .tb tr:nth-child(2n)
+        {
+            background:#E7F6FD;
         }
     </style>
     <body>
-        ${requestScope.ses.id}, class: ${requestScope.ses.group.name} 
-        <br/>
-        Subject: ${requestScope.ses.group.subject.name}
-        Room: ${requestScope.ses.room.name}, Time: ${requestScope.ses.date} ${requestScope.ses.timeslot.description}
-        <br/>
-        Attended: ${requestScope.ses.attandated?"Yes":"No"}
+        <div class="header">
+            Take Attendance For Group: <u>${requestScope.ses.group.name}</u><br/>
+            Subject: ${requestScope.ses.group.subject.name} <br>
+            Room: ${requestScope.ses.room.name} <br>
+            Time: ${requestScope.ses.date} | ${requestScope.ses.timeslot.description}
+            <br/>
+            Attended: <span style="color: red;"> ${requestScope.ses.attandated?"Yes":"No"} </span>
+        </div>
         <form action="takeatt" method="POST">
             <input type="hidden" name="sesid" value="${param.id}"/>
-            <table border="1px">
+            <table class="tb" border="1px">
                 <tr class="title">
                     <td>Student Id</td>
                     <td>Student Name</td>
@@ -35,23 +45,23 @@
                     <td>Description</td>
                 </tr>
                 <c:forEach items="${requestScope.atts}" var="a">
-                  <tr>
-                    <td>${a.student.id}
-                        <input type="hidden" value="${a.student.id}" name="stdid"/>
-                    </td>
-                    <td>${a.student.name}</td>
-                    <td><input type="radio" 
-                               <c:if test="${a.present}">
-                               checked="checked" 
-                               </c:if>
-                               name="present${a.student.id}" value="present" /></td>
-                    <td><input type="radio"
-                               <c:if test="${!a.present}">
-                               checked="checked" 
-                               </c:if>
-                               name="present${a.student.id}" value="absent" /></td>
-                    <td><input type="" value="${a.description}" name="description${a.student.id}"></td>
-                </tr>  
+                    <tr>
+                        <td>${a.student.id}
+                            <input type="hidden" value="${a.student.id}" name="stdid"/>
+                        </td>
+                        <td>${a.student.name}</td>
+                        <td><input type="radio" 
+                                   <c:if test="${a.present}">
+                                       checked="checked" 
+                                   </c:if>
+                                   name="present${a.student.id}" value="present" /></td>
+                        <td><input type="radio"
+                                   <c:if test="${!a.present}">
+                                       checked="checked" 
+                                   </c:if>
+                                   name="present${a.student.id}" value="absent" /></td>
+                        <td><input type="" value="${a.description}" name="description${a.student.id}"></td>
+                    </tr>  
                 </c:forEach>
             </table>
             <input type="submit" value="Save"/>

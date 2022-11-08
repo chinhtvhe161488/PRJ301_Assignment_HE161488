@@ -67,12 +67,12 @@
                         Password: <input type="password" name="password" /> <br/>
                         <input type="submit" value="Login"/>-->
             <div class="container">
-                <label for="uname"><b>Username</b></label>
+                <label for="uname"><b style="color: #ffffff">Username</b></label>
                 <input type="text" placeholder="Enter Username" name="username" required>
 
-                <label for="psw"><b>Password</b></label>
+                <label for="psw"><b style="color: #ffffff">Password</b></label>
                 <input type="password" placeholder="Enter Password" name="password" required>
-  
+
                 <button type="submit">Login</button>
             </div>
         </form>

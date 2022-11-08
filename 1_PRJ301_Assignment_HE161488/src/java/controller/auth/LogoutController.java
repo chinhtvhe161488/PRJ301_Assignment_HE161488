@@ -29,6 +29,7 @@ public class LogoutController extends HttpServlet {
             throws ServletException, IOException {
         request.getSession().setAttribute("account", null);
         response.getWriter().println("logout successful!");
+        response.sendRedirect("/1_PRJ301_Assignment_HE161488/home");
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

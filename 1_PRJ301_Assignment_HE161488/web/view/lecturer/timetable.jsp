@@ -14,22 +14,34 @@
         <title>Time Table</title>
     </head>
     <style>
+        .header{
+            margin: 0 0 20px;
+        }
         .home{
-           padding-top: 10px;
-           text-align: center; 
-           align-items: center;
+            padding-top: 10px;
+            text-align: center;
+        }
+        .title{
+            background-color: #6b90da;
+            color: #ffffff;
+        }
+        .tb tr:nth-child(2n)
+        {
+            background:#E7F6FD;
         }
     </style>
     <body>
-        Lecturer: <input type="text" readonly="readonly" value="${requestScope.lecturer.name}"/>
-        <form action="timetable" method="GET">
-            <input type="hidden" name="lid" value="${param.lid}"/>
-            From: <input type="date" name="from" value="${requestScope.from}"/>
-            To: <input type="date" name="to" value="${requestScope.to}"/>
-            <input type="submit" value="View"/> 
-        </form>
-        <table border="1px">
-            <tr style="background-color: #6b90da;">
+        <div class="header">
+            Lecturer: <input type="text" readonly="readonly" value="${requestScope.lecturer.name}"/>
+            <form action="timetable" method="GET">
+                <input type="hidden" name="lid" value="${param.lid}"/>
+                From: <input type="date" name="from" value="${requestScope.from}"/>
+                To: <input type="date" name="to" value="${requestScope.to}"/>
+                <input type="submit" value="View"/> 
+            </form>
+        </div>
+        <table class="tb" border="1px">
+            <tr class="title">
                 <td> </td>
                 <c:forEach items="${requestScope.dates}" var="d">
                     <td>${d}<br/>${helper.getDayNameofWeek(d)}</td>
@@ -52,13 +64,13 @@
                                         <img style="width: 15px;" src="../img/red-x-red-x-11563060665ltfumg5kvi.png" alt=""/>
                                     </c:if>
                                 </c:if>
-                                  
+
                             </c:forEach>
                         </td>
                     </c:forEach>
                 </tr>
             </c:forEach>
         </table>
-            <div class="home"><button><a href="../home">Home</a></button></div>
+        <div class="home"><button><a href="../home">Home</a></button></div>
     </body>
 </html>
