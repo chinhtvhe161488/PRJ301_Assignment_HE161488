@@ -43,7 +43,7 @@
     <body>
         <h1 style="text-align: center;">FPT University Academic Portal</h1>
         <div class="info">
-            <h2>Activities for ${sessionScope.account.displayname}</h2>
+            <h2>Activities for <i>${sessionScope.account.displayname}</i></h2>
             <span><b>Note :</b> These activities do not include extra-curriculum activities, such as club activities ...</span> <br>
             <span><b>Chú Thích :</b> Các hoạt động trong bảng dưới không bao gồm hoạt động ngoại khóa, ví dụ như hoạt động câu lạc bộ ...</span><br> <br>
             <span>Các phòng bắt đầu bằng AL thuộc tòa nhà Alpha. VD: AL...</span> <br>

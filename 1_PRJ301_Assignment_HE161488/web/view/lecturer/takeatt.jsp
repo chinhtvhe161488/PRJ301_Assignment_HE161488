@@ -13,6 +13,11 @@
         <title>Take Attendance</title>
     </head>
     <style>
+        body{
+            overflow-x: hidden;
+            box-sizing: border-box;
+            margin-left: 50px;
+        }
         .header{
             margin: 20px 0 20px;
         }
@@ -24,8 +29,17 @@
         {
             background:#E7F6FD;
         }
+        .tb{
+            width: 90%;
+            margin-bottom: 20px;
+        }
+        .footer{
+            padding-top: 100px;
+            text-align: center;
+        }
     </style>
     <body>
+        <h2>Take Attendance by Lecturer: <i>${sessionScope.account.displayname}</i></h2>
         <div class="header">
             Take Attendance For Group: <u>${requestScope.ses.group.name}</u><br/>
             Subject: ${requestScope.ses.group.subject.name} <br>
@@ -67,6 +81,8 @@
             <input type="submit" value="Save"/>
             <!--<span class="back"><button><a href="../lecturer/timetable"+}>Back</a></button></span>-->
             <span class="home"><button><a href="../home">Home</a></button></span>
+            <p class="footer"><b>Mọi góp ý, thắc mắc liên hệ :</b> Phòng dịch vụ sinh viên: Email: <a href="#">dichvusinhvien@fe.edu.vn</a>. Điện thoại : <b>(024)7308.13.13</b></p>
+            <p class="footer" style="padding: 0px;">© Powered by <a href="https://fpt.edu.vn/">FPT University</a> | <a href="https://cmshn.fpt.edu.vn/">CMS</a> | <a href="http://libol.fpt.edu.vn/">library</a> | <a href="https://library.books24x7.com/login.asp?ic=0">books24x7</a></p>
         </form>
     </body>
 </html>

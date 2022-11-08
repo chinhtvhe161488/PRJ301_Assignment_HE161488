@@ -45,7 +45,7 @@
             font-size: 25px;
         }
         .footer{
-            padding-top: 50px;
+            padding-top: 100px;
             text-align: center;
         }
     </style>
@@ -70,7 +70,8 @@
             <!--            click 
                         <a href="login">here</a> to login. -->
         </c:if>
-        <p class="footer">© Powered by <a href="https://fpt.edu.vn/">FPT University</a> | <a href="https://cmshn.fpt.edu.vn/">CMS</a> | <a href="http://libol.fpt.edu.vn/">library</a> | <a href="https://library.books24x7.com/login.asp?ic=0">books24x7</a></p>
+            <p class="footer"><b>Mọi góp ý, thắc mắc liên hệ :</b> Phòng dịch vụ sinh viên: Email: <a href="#">dichvusinhvien@fe.edu.vn</a>. Điện thoại : <b>(024)7308.13.13</b></p>
+            <p class="footer" style="padding: 0px;">© Powered by <a href="https://fpt.edu.vn/">FPT University</a> | <a href="https://cmshn.fpt.edu.vn/">CMS</a> | <a href="http://libol.fpt.edu.vn/">library</a> | <a href="https://library.books24x7.com/login.asp?ic=0">books24x7</a></p>
     </div>
     <script>
         document.getElementById("myBtn").addEventListener("click", function () {

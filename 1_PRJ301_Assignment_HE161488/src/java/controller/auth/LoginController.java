@@ -47,11 +47,14 @@ public class LoginController extends HttpServlet {
         String password = request.getParameter("password");
         AccountDBContext db = new AccountDBContext();
         Account account = db.get(username, password);
+        String mess = "Login Failed!";
         if (account == null) {
             response.getWriter().println("login failed!");
+            request.setAttribute("mess", mess);
+//            response.sendRedirect("/1_PRJ301_Assignment_HE161488/login");
         } else {
             request.getSession().setAttribute("account", account);
-            response.getWriter().println("login successful!");
+//            response.getWriter().println("login successful!");
             response.sendRedirect("/1_PRJ301_Assignment_HE161488/home");
 //            request.getRequestDispatcher("view/home.jsp").forward(request, response);
         }
