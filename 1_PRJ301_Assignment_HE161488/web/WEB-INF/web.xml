@@ -40,7 +40,7 @@
         <servlet-name>TakeAttController</servlet-name>
         <url-pattern>/lecturer/takeatt</url-pattern>
     </servlet-mapping>
-    <session-config>
+   <session-config>
         <session-timeout>
             30
         </session-timeout>

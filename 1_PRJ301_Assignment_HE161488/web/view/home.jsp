@@ -60,7 +60,7 @@
             </div>
         </c:if>
         <div>
-
+           
         </div>
         <c:if test="${sessionScope.account eq null}">
             <div class="left-header">
